@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rawg_ic" />
+        app:srcCompat="@drawable/rawg" />
 
     <TextView
         android:id="@+id/titleApp"
@@ -23,11 +23,24 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textSize="36sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgApp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/descApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_my_team"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleApp"
         android:layout_gravity="center_horizontal" />
 </androidx.constraintlayout.widget.ConstraintLayout>

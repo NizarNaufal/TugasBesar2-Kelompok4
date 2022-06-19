@@ -13,20 +13,20 @@ class LocalDataSource(private val blownDao: GamesDao) {
     fun getSearchGames(search: String): Flow<List<GamesEntity>> =
         blownDao.getSearchGames("$search%")
 
-    suspend fun insertGames(games: List<GamesEntity>) = blownDao.insertGames(games)
+    fun insertGames(games: List<GamesEntity>) = blownDao.insertGames(games)
 
     fun getDetailGames(id: Int): Flow<GamesEntity> = blownDao.getDetailGames(id)
 
-    suspend fun updateDetailGames(games: GamesEntity) = blownDao.updateDetailGames(games)
+    fun updateDetailGames(games: GamesEntity) = blownDao.updateDetailGames(games)
 
     fun getListGamesFavorites(): DataSource.Factory<Int, GamesEntity> =
         blownDao.getListGamesFavorites()
 
     fun getGamesFavorite(id: Int): Flow<FavoriteGamesEntity> = blownDao.getGamesFavorite(id)
 
-    suspend fun insertFavoriteGame(favoriteGames: FavoriteGamesEntity) =
+    fun insertFavoriteGame(favoriteGames: FavoriteGamesEntity) =
         blownDao.insertFavoriteGame(favoriteGames)
 
-    suspend fun deleteFavoriteGame(favoriteGames: FavoriteGamesEntity) =
+    fun deleteFavoriteGame(favoriteGames: FavoriteGamesEntity) =
         blownDao.deleteFavoriteGame(favoriteGames)
 }

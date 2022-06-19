@@ -31,7 +31,7 @@ val databaseModule = module {
                 androidContext(),
                 GamesDatabase::class.java,
                 "Blown.db"
-            )
+            ).allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .openHelperFactory(supportFactory)
             .build()

@@ -11,22 +11,12 @@ android {
 
     defaultConfig {
         applicationId "com.kelompok4.tugasbesar2"
-        applicationVariants.all { variant ->
-            variant.outputs.all { output ->
-                def project = "TugasBesar2-Kel4"
-                def SEP = "-"
-                def version = variant.versionName
-                def newApkName = project +SEP +version + ".apk"
-                outputFileName = new File(newApkName)
-            }
-        }
         minSdkVersion 16
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        setProperty("archivesBaseName",  "app")
     }
 
     buildTypes {
@@ -41,6 +31,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    configurations {
+        all*.exclude module: 'okhttp'
+        all*.exclude module: 'okio'
     }
     buildFeatures{
         viewBinding true

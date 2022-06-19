@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Tugas Besar 2</string>
+    <string name="app_name">Tugas Besar 2 - Kelompok 4</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="str_my_team">Nizar Naufal : 41519120083 \n Dicky Saputra : 41519120108 \n Rizky Maulana : 41519120103 \n Putri Agustianingsih : 41519120080 \n Rizaldi Febryan Prayoga : 41518320018</string>
     <string name="title_home">Home Rawg</string>
     <string name="title_search">Search Rawg</string>
     <string name="title_favorite">Favorite Rawg</string>
